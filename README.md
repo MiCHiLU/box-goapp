@@ -16,7 +16,7 @@ box: michilu/goapp
 deploy:
   steps:
   - setup-go-workspace
-  - pjvds/go-appengine-deploy:
+  - michilu/go-appengine-deploy:
       email:    $APP_ENGINE_EMAIL
       password: $APP_ENGINE_PASSWORD
 ```
