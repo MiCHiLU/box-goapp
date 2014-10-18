@@ -1,6 +1,6 @@
 name: goapp
-version: 1.9.12
-inherits: wercker/golang@1.2.0
+version: 1.9.13-3
+inherits: wercker/golang@1.2.1
 type: main
 platform: ubuntu@12.04
 description: Extends wercker golang box to include go_appengine to provide goapp for Google App Engine.
@@ -11,9 +11,9 @@ keywords:
   - gae
   - go_appengine
 packages:
-  - go_appengine@1.9.12
+  - go_appengine@1.9.13
 script: |
-  version="1.9.12"
+  version="1.9.13"
 
   sudo apt-get update
   sudo apt-get install unzip
@@ -70,3 +70,10 @@ default-build:
               name: goapp test
               code: |
                 goapp test ./...
+
+          # Output the project
+          - script:
+              name: copy to output directory
+              code: |-
+                rsync -avz $WERCKER_SOURCE_DIR/ $WERCKER_OUTPUT_DIR
+                rsync -avz $GOPATH/src/ $WERCKER_OUTPUT_DIR/app
