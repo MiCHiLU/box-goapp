@@ -1,5 +1,5 @@
 name: goapp
-version: 1.9.13-3
+version: 1.9.13-4
 inherits: wercker/golang@1.2.1
 type: main
 platform: ubuntu@12.04
@@ -76,4 +76,3 @@ default-build:
               name: copy to output directory
               code: |-
                 rsync -avz $WERCKER_SOURCE_DIR/ $WERCKER_OUTPUT_DIR
-                rsync -avz $GOPATH/src/ $WERCKER_OUTPUT_DIR/app
