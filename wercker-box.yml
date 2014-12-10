@@ -1,5 +1,5 @@
 name: goapp
-version: 1.9.14
+version: 1.9.15
 inherits: wercker/golang@1.2.1
 type: main
 platform: ubuntu@12.04
@@ -11,15 +11,14 @@ keywords:
   - gae
   - go_appengine
 packages:
-  - go_appengine@1.9.14
+  - go_appengine@1.9.15
 script: |
-  version="1.9.14"
+  version="1.9.15"
 
   sudo apt-get update
   sudo apt-get install unzip
 
-  #wget https://storage.googleapis.com/appengine-sdks/featured/go_appengine_sdk_linux_amd64-${version}.zip
-  wget https://storage.googleapis.com/appengine-sdks/deprecated/1914/go_appengine_sdk_linux_amd64-1.9.14.zip
+  wget https://storage.googleapis.com/appengine-sdks/featured/go_appengine_sdk_linux_amd64-${version}.zip
   sudo unzip go_appengine_sdk_linux_amd64-${version}.zip -d /usr/local
   sudo chmod -R a+rx /usr/local/go_appengine
   echo "export PATH=$PATH:/usr/local/go_appengine" | sudo tee -a /etc/profile
