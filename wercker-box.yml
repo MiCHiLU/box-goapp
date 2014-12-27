@@ -1,5 +1,5 @@
 name: goapp
-version: 1.9.17-10
+version: 1.9.17-11
 inherits: wercker/golang@1.2.1
 type: main
 platform: ubuntu@12.04
@@ -54,7 +54,7 @@ default-build:
           - script:
               name: set GOPATH
               code: |
-                export GOPATH="$GOPATH:$WERCKER_SOURCE_DIR/src/$WERCKER_GIT_DOMAIN/$WERCKER_GIT_OWNER/$WERCKER_GIT_REPOSITORY"
+                export GOPATH="$GOPATH:$WERCKER_SOURCE_DIR"
                 goapp env GOPATH
 
           # Gets the dependencies
