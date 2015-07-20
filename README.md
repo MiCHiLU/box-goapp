@@ -17,6 +17,5 @@ deploy:
   steps:
   - setup-go-workspace
   - michilu/go-appengine-deploy:
-      email:    $APP_ENGINE_EMAIL
-      password: $APP_ENGINE_PASSWORD
+      token:    $APP_ENGINE_TOKEN
 ```
