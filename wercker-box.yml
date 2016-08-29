@@ -1,6 +1,6 @@
 name: goapp
 version: 1.9.40
-inherits: wercker/golang@1.2.1
+inherits: wercker/golang@1.4.0
 type: main
 platform: ubuntu@12.04
 description: Extends wercker golang box to include go_appengine to provide goapp for Google App Engine.
