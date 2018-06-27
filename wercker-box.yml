@@ -1,5 +1,5 @@
 name: goapp
-version: 1.9.64
+version: 1.9.65
 inherits: wercker/golang@1.4.0
 type: main
 platform: ubuntu@12.04
@@ -11,9 +11,9 @@ keywords:
   - gae
   - go_appengine
 packages:
-  - go_appengine@1.9.64
+  - go_appengine@1.9.65
 script: |
-  version="1.9.64"
+  version="1.9.65"
 
   sudo apt-get update
   sudo apt-get install unzip
